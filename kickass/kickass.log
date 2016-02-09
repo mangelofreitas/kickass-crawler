@@ -1,0 +1,27 @@
+2016-01-12 03:00:59 [scrapy] INFO: Scrapy 1.0.4 started (bot: kickass)
+2016-01-12 03:00:59 [scrapy] INFO: Optional features available: ssl, http11
+2016-01-12 03:00:59 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'kickass.spiders', 'CONCURRENT_REQUESTS_PER_DOMAIN': 1, 'RANDOMIZE_DOWNLOAD_DELAY': False, 'SPIDER_MODULES': ['kickass.spiders'], 'BOT_NAME': 'kickass', 'USER_AGENT': 'http://www.kickass.to)', 'LOG_FILE': './kickass.log', 'DOWNLOAD_DELAY': 5}
+2016-01-12 03:03:06 [scrapy] INFO: Scrapy 1.0.4 started (bot: kickass)
+2016-01-12 03:03:06 [scrapy] INFO: Optional features available: ssl, http11
+2016-01-12 03:03:06 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'kickass.spiders', 'CONCURRENT_REQUESTS_PER_DOMAIN': 1, 'RANDOMIZE_DOWNLOAD_DELAY': False, 'SPIDER_MODULES': ['kickass.spiders'], 'BOT_NAME': 'kickass', 'USER_AGENT': 'http://www.kickass.to)', 'LOG_FILE': './kickass.log', 'DOWNLOAD_DELAY': 5}
+2016-01-12 03:03:13 [scrapy] INFO: Scrapy 1.0.4 started (bot: kickass)
+2016-01-12 03:03:13 [scrapy] INFO: Optional features available: ssl, http11
+2016-01-12 03:03:13 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'kickass.spiders', 'CONCURRENT_REQUESTS_PER_DOMAIN': 1, 'RANDOMIZE_DOWNLOAD_DELAY': False, 'SPIDER_MODULES': ['kickass.spiders'], 'BOT_NAME': 'kickass', 'USER_AGENT': 'http://www.kickass.to)', 'LOG_FILE': './kickass.log', 'DOWNLOAD_DELAY': 5}
+2016-01-12 03:05:22 [scrapy] INFO: Scrapy 1.0.4 started (bot: kickass)
+2016-01-12 03:05:22 [scrapy] INFO: Optional features available: ssl, http11
+2016-01-12 03:05:22 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'kickass.spiders', 'CONCURRENT_REQUESTS_PER_DOMAIN': 1, 'RANDOMIZE_DOWNLOAD_DELAY': False, 'SPIDER_MODULES': ['kickass.spiders'], 'BOT_NAME': 'kickass', 'USER_AGENT': 'http://www.kickass.to)', 'LOG_FILE': './kickass.log', 'DOWNLOAD_DELAY': 5}
+2016-01-12 03:05:27 [scrapy] INFO: Scrapy 1.0.4 started (bot: kickass)
+2016-01-12 03:05:27 [scrapy] INFO: Optional features available: ssl, http11
+2016-01-12 03:05:27 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'kickass.spiders', 'CONCURRENT_REQUESTS_PER_DOMAIN': 1, 'RANDOMIZE_DOWNLOAD_DELAY': False, 'SPIDER_MODULES': ['kickass.spiders'], 'BOT_NAME': 'kickass', 'USER_AGENT': 'http://www.kickass.to)', 'LOG_FILE': './kickass.log', 'DOWNLOAD_DELAY': 5}
+2016-01-12 03:05:32 [scrapy] INFO: Scrapy 1.0.4 started (bot: kickass)
+2016-01-12 03:05:32 [scrapy] INFO: Optional features available: ssl, http11
+2016-01-12 03:05:32 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'kickass.spiders', 'CONCURRENT_REQUESTS_PER_DOMAIN': 1, 'RANDOMIZE_DOWNLOAD_DELAY': False, 'SPIDER_MODULES': ['kickass.spiders'], 'BOT_NAME': 'kickass', 'USER_AGENT': 'http://www.kickass.to)', 'LOG_FILE': './kickass.log', 'DOWNLOAD_DELAY': 5}
+2016-01-12 03:07:09 [scrapy] INFO: Scrapy 1.0.4 started (bot: kickass)
+2016-01-12 03:07:09 [scrapy] INFO: Optional features available: ssl, http11
+2016-01-12 03:07:09 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'kickass.spiders', 'CONCURRENT_REQUESTS_PER_DOMAIN': 1, 'RANDOMIZE_DOWNLOAD_DELAY': False, 'SPIDER_MODULES': ['kickass.spiders'], 'BOT_NAME': 'kickass', 'USER_AGENT': 'http://www.kickass.to)', 'LOG_FILE': './kickass.log', 'DOWNLOAD_DELAY': 5}
+2016-01-12 03:07:15 [scrapy] INFO: Scrapy 1.0.4 started (bot: kickass)
+2016-01-12 03:07:15 [scrapy] INFO: Optional features available: ssl, http11
+2016-01-12 03:07:15 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'kickass.spiders', 'CONCURRENT_REQUESTS_PER_DOMAIN': 1, 'RANDOMIZE_DOWNLOAD_DELAY': False, 'SPIDER_MODULES': ['kickass.spiders'], 'BOT_NAME': 'kickass', 'USER_AGENT': 'http://www.kickass.to)', 'LOG_FILE': './kickass.log', 'DOWNLOAD_DELAY': 5}
+2016-02-09 19:44:23 [scrapy] INFO: Scrapy 1.0.4 started (bot: kickass)
+2016-02-09 19:44:23 [scrapy] INFO: Optional features available: ssl, http11
+2016-02-09 19:44:23 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'kickass.spiders', 'CONCURRENT_REQUESTS_PER_DOMAIN': 1, 'RANDOMIZE_DOWNLOAD_DELAY': False, 'SPIDER_MODULES': ['kickass.spiders'], 'BOT_NAME': 'kickass', 'USER_AGENT': 'http://www.kickass.to)', 'LOG_FILE': './kickass.log', 'DOWNLOAD_DELAY': 5}
