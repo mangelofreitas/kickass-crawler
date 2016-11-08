@@ -8,7 +8,7 @@
 from scrapy.item import Item, Field
 
 
-class KickassItem(Item):
+class TorrentItem(Item):
     title = Field()
     url = Field()
     size = Field()

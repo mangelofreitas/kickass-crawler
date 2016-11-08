@@ -9,7 +9,7 @@ import subprocess
 import time
 import os
 
-class KickassPipeline(object):
+class TorrentsPipeline(object):
 
     def __init__(self):
         if not os.path.exists('torrents'):
@@ -28,11 +28,11 @@ class KickassPipeline(object):
         f.write(title + "\n")
         f.close()
         #print item['torrent']
-        path = 'https:'+item['torrent']
+        path = item['torrent']
         print 'Torrent path: '+path
         #path = path[2:]
         #print 'Path 2: '+path
-        process = subprocess.Popen("sh curl_torrent.sh "+path,stdout=subprocess.PIPE,shell=True)
+        process = subprocess.Popen("bash\nsh curl_torrent.sh "+path,stdout=subprocess.PIPE,shell=True)
         output = process.communicate()[0]
         print output
 

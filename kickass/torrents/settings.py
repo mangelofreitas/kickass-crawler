@@ -9,10 +9,10 @@
 #     http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 #     http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'kickass'
+BOT_NAME = 'torrents'
 
-SPIDER_MODULES = ['kickass.spiders']
-NEWSPIDER_MODULE = 'kickass.spiders'
+SPIDER_MODULES = ['torrents.spiders']
+NEWSPIDER_MODULE = 'torrents.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
@@ -61,7 +61,7 @@ NEWSPIDER_MODULE = 'kickass.spiders'
 
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
-ITEM_PIPELINES = ['kickass.pipelines.KickassPipeline']
+ITEM_PIPELINES = {'torrents.pipelines.TorrentsPipeline':300,}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See http://doc.scrapy.org/en/latest/topics/autothrottle.html
@@ -85,7 +85,7 @@ ITEM_PIPELINES = ['kickass.pipelines.KickassPipeline']
 # Download and traffic settings.
 # Limit concurrent requests and add a
 # download delay to minimize hammering.
-USER_AGENT = 'http://www.kickass.to)'
+USER_AGENT = 'https://www.thepiratebay.org'
 DOWNLOAD_DELAY = 5
 RANDOMIZE_DOWNLOAD_DELAY = False
 CONCURRENT_REQUESTS_PER_DOMAIN = 1 # 	Default: 8
@@ -94,4 +94,4 @@ CONCURRENT_REQUESTS_PER_DOMAIN = 1 # 	Default: 8
 # Log Settings
 LOG_ENABLED = True
 LOG_LEVEL = 'DEBUG' #	Levels: CRITICAL, ERROR, WARNING, INFO, DEBUG
-LOG_FILE = './kickass.log'
+LOG_FILE = './torrents.log'

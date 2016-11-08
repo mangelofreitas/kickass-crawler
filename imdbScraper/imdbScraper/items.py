@@ -1,8 +1,8 @@
 
 
-import scrapy
+from scrapy.item import Item, Field
 
 
-class ImdbscraperItem(scrapy.Item):
-    season = scrapy.Item()
-    episode = scrapy.Item()
+class ImdbscraperItem(Item):
+    season = Field()
+    episode = Field()

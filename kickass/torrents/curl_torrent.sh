@@ -7,4 +7,4 @@ AGENT="'Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.8.1.6) Gecko/20070802 SeaMo
 #url=`echo $1 | cut -c3-`
 #echo $name='torrents/kickass.torrent.tmp'
 curl --globoff --compressed -A '$AGENT' -L --post302 $1 > 'torrents/kickass.torrent'
-roxterm -e rtorrent 'torrents/kickass.torrent'
+lxterminal -e rtorrent 'torrents/kickass.torrent'

@@ -1,0 +1,391 @@
+2016-11-06 18:19:34 [scrapy] INFO: Scrapy 1.2.1 started (bot: torrents)
+2016-11-06 18:19:34 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'torrents.spiders', 'CONCURRENT_REQUESTS_PER_DOMAIN': 1, 'RANDOMIZE_DOWNLOAD_DELAY': False, 'SPIDER_MODULES': ['torrents.spiders'], 'BOT_NAME': 'torrents', 'USER_AGENT': 'https://www.thepiratebay.org', 'LOG_FILE': './torrents.log', 'DOWNLOAD_DELAY': 5}
+2016-11-06 18:19:34 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats']
+2016-11-06 18:19:35 [scrapy] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2016-11-06 18:19:35 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2016-11-06 18:19:35 [scrapy] INFO: Enabled item pipelines:
+['torrents.pipelines.TorrentsPipeline']
+2016-11-06 18:19:35 [scrapy] INFO: Spider opened
+2016-11-06 18:19:35 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2016-11-06 18:19:35 [scrapy] DEBUG: Telnet console listening on 127.0.0.1:6023
+2016-11-06 18:19:40 [scrapy] DEBUG: Crawled (200) <GET https://thepiratebay.org/search/spartacus%20s01e01/0/99/205/> (referer: None)
+2016-11-06 18:19:40 [py.warnings] WARNING: C:\Users\mianj\Git\kickass-crawler\torrents\torrents\spiders\torrents_spider.py:51: ScrapyDeprecationWarning: Call to deprecated function select. Use .xpath() instead.
+  item['title'] = entry.select('td[2]/div[1]/a[1]/text()').extract()
+
+2016-11-06 18:19:40 [py.warnings] WARNING: C:\Users\mianj\Git\kickass-crawler\torrents\torrents\spiders\torrents_spider.py:53: ScrapyDeprecationWarning: Call to deprecated function select. Use .xpath() instead.
+  item['url'] = entry.select('td[2]/div[1]/a[1]/@href').extract()
+
+2016-11-06 18:19:40 [py.warnings] WARNING: C:\Users\mianj\Git\kickass-crawler\torrents\torrents\spiders\torrents_spider.py:55: ScrapyDeprecationWarning: Call to deprecated function select. Use .xpath() instead.
+  item['torrent'] = entry.select('td[2]/a[starts-with(@title,"Download this torrent")]/@href').extract()
+
+2016-11-06 18:19:40 [py.warnings] WARNING: C:\Users\mianj\Git\kickass-crawler\torrents\torrents\spiders\torrents_spider.py:57: ScrapyDeprecationWarning: Call to deprecated function select. Use .xpath() instead.
+  item['seed'] = entry.select('td[3]/text()').extract()
+
+2016-11-06 18:19:40 [py.warnings] WARNING: C:\Users\mianj\Git\kickass-crawler\torrents\torrents\spiders\torrents_spider.py:59: ScrapyDeprecationWarning: Call to deprecated function select. Use .xpath() instead.
+  item['leech'] = entry.select('td[4]/text()').extract()
+
+2016-11-06 18:19:47 [scrapy] DEBUG: Scraped from <200 https://thepiratebay.org/search/spartacus%20s01e01/0/99/205/>
+{'leech': u'0',
+ 'seed': u'22',
+ 'title': u'Spartacus Blood and Sand S01E01 READNFO HDTV XviD-2HD [eztv]',
+ 'torrent': u'magnet:?xt=urn:btih:524450f71c7e4c199f9f64ac01071adc005d4b3b&dn=Spartacus+Blood+and+Sand+S01E01+READNFO+HDTV+XviD-2HD+%5Beztv%5D&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Fzer0day.ch%3A1337&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fexodus.desync.com%3A6969',
+ 'url': u'/torrent/5303658/Spartacus_Blood_and_Sand_S01E01_READNFO_HDTV_XviD-2HD_[eztv]'}
+2016-11-06 18:19:47 [scrapy] INFO: Closing spider (finished)
+2016-11-06 18:19:47 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 244,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 11815,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2016, 11, 6, 18, 19, 47, 243000),
+ 'item_scraped_count': 1,
+ 'log_count/DEBUG': 3,
+ 'log_count/INFO': 7,
+ 'log_count/WARNING': 5,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2016, 11, 6, 18, 19, 35, 218000)}
+2016-11-06 18:19:47 [scrapy] INFO: Spider closed (finished)
+2016-11-06 18:20:43 [scrapy] INFO: Scrapy 1.2.1 started (bot: torrents)
+2016-11-06 18:20:43 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'torrents.spiders', 'CONCURRENT_REQUESTS_PER_DOMAIN': 1, 'RANDOMIZE_DOWNLOAD_DELAY': False, 'SPIDER_MODULES': ['torrents.spiders'], 'BOT_NAME': 'torrents', 'USER_AGENT': 'https://www.thepiratebay.org', 'LOG_FILE': './torrents.log', 'DOWNLOAD_DELAY': 5}
+2016-11-06 18:20:43 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats']
+2016-11-06 18:20:43 [scrapy] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2016-11-06 18:20:43 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2016-11-06 18:20:43 [scrapy] INFO: Enabled item pipelines:
+['torrents.pipelines.TorrentsPipeline']
+2016-11-06 18:20:43 [scrapy] INFO: Spider opened
+2016-11-06 18:20:43 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2016-11-06 18:20:43 [scrapy] DEBUG: Telnet console listening on 127.0.0.1:6023
+2016-11-06 18:20:44 [scrapy] DEBUG: Crawled (200) <GET https://thepiratebay.org/search/spartacus%20s01e01/0/99/205/> (referer: None)
+2016-11-06 18:20:44 [py.warnings] WARNING: C:\Users\mianj\Git\kickass-crawler\torrents\torrents\spiders\torrents_spider.py:51: ScrapyDeprecationWarning: Call to deprecated function select. Use .xpath() instead.
+  item['title'] = entry.select('td[2]/div[1]/a[1]/text()').extract()
+
+2016-11-06 18:20:44 [py.warnings] WARNING: C:\Users\mianj\Git\kickass-crawler\torrents\torrents\spiders\torrents_spider.py:53: ScrapyDeprecationWarning: Call to deprecated function select. Use .xpath() instead.
+  item['url'] = entry.select('td[2]/div[1]/a[1]/@href').extract()
+
+2016-11-06 18:20:44 [py.warnings] WARNING: C:\Users\mianj\Git\kickass-crawler\torrents\torrents\spiders\torrents_spider.py:55: ScrapyDeprecationWarning: Call to deprecated function select. Use .xpath() instead.
+  item['torrent'] = entry.select('td[2]/a[starts-with(@title,"Download this torrent")]/@href').extract()
+
+2016-11-06 18:20:44 [py.warnings] WARNING: C:\Users\mianj\Git\kickass-crawler\torrents\torrents\spiders\torrents_spider.py:57: ScrapyDeprecationWarning: Call to deprecated function select. Use .xpath() instead.
+  item['seed'] = entry.select('td[3]/text()').extract()
+
+2016-11-06 18:20:44 [py.warnings] WARNING: C:\Users\mianj\Git\kickass-crawler\torrents\torrents\spiders\torrents_spider.py:59: ScrapyDeprecationWarning: Call to deprecated function select. Use .xpath() instead.
+  item['leech'] = entry.select('td[4]/text()').extract()
+
+2016-11-06 18:20:51 [scrapy] DEBUG: Scraped from <200 https://thepiratebay.org/search/spartacus%20s01e01/0/99/205/>
+{'leech': u'0',
+ 'seed': u'22',
+ 'title': u'Spartacus Blood and Sand S01E01 READNFO HDTV XviD-2HD [eztv]',
+ 'torrent': u'magnet:?xt=urn:btih:524450f71c7e4c199f9f64ac01071adc005d4b3b&dn=Spartacus+Blood+and+Sand+S01E01+READNFO+HDTV+XviD-2HD+%5Beztv%5D&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Fzer0day.ch%3A1337&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fexodus.desync.com%3A6969',
+ 'url': u'/torrent/5303658/Spartacus_Blood_and_Sand_S01E01_READNFO_HDTV_XviD-2HD_[eztv]'}
+2016-11-06 18:20:51 [scrapy] INFO: Closing spider (finished)
+2016-11-06 18:20:51 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 244,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 11867,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2016, 11, 6, 18, 20, 51, 266000),
+ 'item_scraped_count': 1,
+ 'log_count/DEBUG': 3,
+ 'log_count/INFO': 7,
+ 'log_count/WARNING': 5,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2016, 11, 6, 18, 20, 43, 582000)}
+2016-11-06 18:20:51 [scrapy] INFO: Spider closed (finished)
+2016-11-06 18:23:11 [scrapy] INFO: Scrapy 1.2.1 started (bot: torrents)
+2016-11-06 18:23:11 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'torrents.spiders', 'CONCURRENT_REQUESTS_PER_DOMAIN': 1, 'RANDOMIZE_DOWNLOAD_DELAY': False, 'SPIDER_MODULES': ['torrents.spiders'], 'BOT_NAME': 'torrents', 'USER_AGENT': 'https://www.thepiratebay.org', 'LOG_FILE': './torrents.log', 'DOWNLOAD_DELAY': 5}
+2016-11-06 18:23:11 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats']
+2016-11-06 18:23:11 [scrapy] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2016-11-06 18:23:11 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2016-11-06 18:23:11 [scrapy] INFO: Enabled item pipelines:
+['torrents.pipelines.TorrentsPipeline']
+2016-11-06 18:23:11 [scrapy] INFO: Spider opened
+2016-11-06 18:23:11 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2016-11-06 18:23:11 [scrapy] DEBUG: Telnet console listening on 127.0.0.1:6023
+2016-11-06 18:23:13 [scrapy] DEBUG: Crawled (200) <GET https://thepiratebay.org/search/spartacus%20s01e01/0/99/205/> (referer: None)
+2016-11-06 18:23:13 [py.warnings] WARNING: C:\Users\mianj\Git\kickass-crawler\torrents\torrents\spiders\torrents_spider.py:51: ScrapyDeprecationWarning: Call to deprecated function select. Use .xpath() instead.
+  item['title'] = entry.select('td[2]/div[1]/a[1]/text()').extract()
+
+2016-11-06 18:23:13 [py.warnings] WARNING: C:\Users\mianj\Git\kickass-crawler\torrents\torrents\spiders\torrents_spider.py:53: ScrapyDeprecationWarning: Call to deprecated function select. Use .xpath() instead.
+  item['url'] = entry.select('td[2]/div[1]/a[1]/@href').extract()
+
+2016-11-06 18:23:13 [py.warnings] WARNING: C:\Users\mianj\Git\kickass-crawler\torrents\torrents\spiders\torrents_spider.py:55: ScrapyDeprecationWarning: Call to deprecated function select. Use .xpath() instead.
+  item['torrent'] = entry.select('td[2]/a[starts-with(@title,"Download this torrent")]/@href').extract()
+
+2016-11-06 18:23:13 [py.warnings] WARNING: C:\Users\mianj\Git\kickass-crawler\torrents\torrents\spiders\torrents_spider.py:57: ScrapyDeprecationWarning: Call to deprecated function select. Use .xpath() instead.
+  item['seed'] = entry.select('td[3]/text()').extract()
+
+2016-11-06 18:23:13 [py.warnings] WARNING: C:\Users\mianj\Git\kickass-crawler\torrents\torrents\spiders\torrents_spider.py:59: ScrapyDeprecationWarning: Call to deprecated function select. Use .xpath() instead.
+  item['leech'] = entry.select('td[4]/text()').extract()
+
+2016-11-06 18:23:19 [scrapy] DEBUG: Scraped from <200 https://thepiratebay.org/search/spartacus%20s01e01/0/99/205/>
+{'leech': u'0',
+ 'seed': u'22',
+ 'title': u'Spartacus Blood and Sand S01E01 READNFO HDTV XviD-2HD [eztv]',
+ 'torrent': u'magnet:?xt=urn:btih:524450f71c7e4c199f9f64ac01071adc005d4b3b&dn=Spartacus+Blood+and+Sand+S01E01+READNFO+HDTV+XviD-2HD+%5Beztv%5D&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Fzer0day.ch%3A1337&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fexodus.desync.com%3A6969',
+ 'url': u'/torrent/5303658/Spartacus_Blood_and_Sand_S01E01_READNFO_HDTV_XviD-2HD_[eztv]'}
+2016-11-06 18:23:19 [scrapy] INFO: Closing spider (finished)
+2016-11-06 18:23:19 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 244,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 11804,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2016, 11, 6, 18, 23, 19, 384000),
+ 'item_scraped_count': 1,
+ 'log_count/DEBUG': 3,
+ 'log_count/INFO': 7,
+ 'log_count/WARNING': 5,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2016, 11, 6, 18, 23, 11, 845000)}
+2016-11-06 18:23:19 [scrapy] INFO: Spider closed (finished)
+2016-11-06 18:41:30 [scrapy] INFO: Scrapy 1.2.1 started (bot: torrents)
+2016-11-06 18:41:30 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'torrents.spiders', 'CONCURRENT_REQUESTS_PER_DOMAIN': 1, 'RANDOMIZE_DOWNLOAD_DELAY': False, 'SPIDER_MODULES': ['torrents.spiders'], 'BOT_NAME': 'torrents', 'USER_AGENT': 'https://www.thepiratebay.org', 'LOG_FILE': './torrents.log', 'DOWNLOAD_DELAY': 5}
+2016-11-06 18:41:30 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats']
+2016-11-06 18:41:30 [scrapy] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2016-11-06 18:41:30 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2016-11-06 18:41:30 [scrapy] INFO: Enabled item pipelines:
+['torrents.pipelines.TorrentsPipeline']
+2016-11-06 18:41:30 [scrapy] INFO: Spider opened
+2016-11-06 18:41:30 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2016-11-06 18:41:30 [scrapy] DEBUG: Telnet console listening on 127.0.0.1:6023
+2016-11-06 18:41:32 [scrapy] DEBUG: Crawled (200) <GET https://thepiratebay.org/search/spartacus%20s01e01/0/99/205/> (referer: None)
+2016-11-06 18:41:32 [py.warnings] WARNING: C:\Users\mianj\Git\kickass-crawler\torrents\torrents\spiders\torrents_spider.py:51: ScrapyDeprecationWarning: Call to deprecated function select. Use .xpath() instead.
+  item['title'] = entry.select('td[2]/div[1]/a[1]/text()').extract()
+
+2016-11-06 18:41:32 [py.warnings] WARNING: C:\Users\mianj\Git\kickass-crawler\torrents\torrents\spiders\torrents_spider.py:53: ScrapyDeprecationWarning: Call to deprecated function select. Use .xpath() instead.
+  item['url'] = entry.select('td[2]/div[1]/a[1]/@href').extract()
+
+2016-11-06 18:41:32 [py.warnings] WARNING: C:\Users\mianj\Git\kickass-crawler\torrents\torrents\spiders\torrents_spider.py:55: ScrapyDeprecationWarning: Call to deprecated function select. Use .xpath() instead.
+  item['torrent'] = entry.select('td[2]/a[starts-with(@title,"Download this torrent")]/@href').extract()
+
+2016-11-06 18:41:32 [py.warnings] WARNING: C:\Users\mianj\Git\kickass-crawler\torrents\torrents\spiders\torrents_spider.py:57: ScrapyDeprecationWarning: Call to deprecated function select. Use .xpath() instead.
+  item['seed'] = entry.select('td[3]/text()').extract()
+
+2016-11-06 18:41:32 [py.warnings] WARNING: C:\Users\mianj\Git\kickass-crawler\torrents\torrents\spiders\torrents_spider.py:59: ScrapyDeprecationWarning: Call to deprecated function select. Use .xpath() instead.
+  item['leech'] = entry.select('td[4]/text()').extract()
+
+2016-11-06 18:41:34 [scrapy] INFO: Closing spider (finished)
+2016-11-06 18:41:34 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 244,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 11905,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2016, 11, 6, 18, 41, 34, 435000),
+ 'log_count/DEBUG': 2,
+ 'log_count/INFO': 7,
+ 'log_count/WARNING': 5,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2016, 11, 6, 18, 41, 30, 708000)}
+2016-11-06 18:41:34 [scrapy] INFO: Spider closed (finished)
+2016-11-06 18:41:57 [scrapy] INFO: Scrapy 1.2.1 started (bot: torrents)
+2016-11-06 18:41:57 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'torrents.spiders', 'CONCURRENT_REQUESTS_PER_DOMAIN': 1, 'RANDOMIZE_DOWNLOAD_DELAY': False, 'SPIDER_MODULES': ['torrents.spiders'], 'BOT_NAME': 'torrents', 'USER_AGENT': 'https://www.thepiratebay.org', 'LOG_FILE': './torrents.log', 'DOWNLOAD_DELAY': 5}
+2016-11-06 18:41:58 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats']
+2016-11-06 18:41:58 [scrapy] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2016-11-06 18:41:58 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2016-11-06 18:41:58 [scrapy] INFO: Enabled item pipelines:
+['torrents.pipelines.TorrentsPipeline']
+2016-11-06 18:41:58 [scrapy] INFO: Spider opened
+2016-11-06 18:41:58 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2016-11-06 18:41:58 [scrapy] DEBUG: Telnet console listening on 127.0.0.1:6023
+2016-11-06 18:42:02 [scrapy] DEBUG: Crawled (200) <GET https://thepiratebay.org/search/naruto/0/99/205/> (referer: None)
+2016-11-06 18:42:02 [py.warnings] WARNING: C:\Users\mianj\Git\kickass-crawler\torrents\torrents\spiders\torrents_spider.py:51: ScrapyDeprecationWarning: Call to deprecated function select. Use .xpath() instead.
+  item['title'] = entry.select('td[2]/div[1]/a[1]/text()').extract()
+
+2016-11-06 18:42:02 [py.warnings] WARNING: C:\Users\mianj\Git\kickass-crawler\torrents\torrents\spiders\torrents_spider.py:53: ScrapyDeprecationWarning: Call to deprecated function select. Use .xpath() instead.
+  item['url'] = entry.select('td[2]/div[1]/a[1]/@href').extract()
+
+2016-11-06 18:42:02 [py.warnings] WARNING: C:\Users\mianj\Git\kickass-crawler\torrents\torrents\spiders\torrents_spider.py:55: ScrapyDeprecationWarning: Call to deprecated function select. Use .xpath() instead.
+  item['torrent'] = entry.select('td[2]/a[starts-with(@title,"Download this torrent")]/@href').extract()
+
+2016-11-06 18:42:02 [py.warnings] WARNING: C:\Users\mianj\Git\kickass-crawler\torrents\torrents\spiders\torrents_spider.py:57: ScrapyDeprecationWarning: Call to deprecated function select. Use .xpath() instead.
+  item['seed'] = entry.select('td[3]/text()').extract()
+
+2016-11-06 18:42:02 [py.warnings] WARNING: C:\Users\mianj\Git\kickass-crawler\torrents\torrents\spiders\torrents_spider.py:59: ScrapyDeprecationWarning: Call to deprecated function select. Use .xpath() instead.
+  item['leech'] = entry.select('td[4]/text()').extract()
+
+2016-11-08 16:41:35 [scrapy] INFO: Scrapy 1.2.1 started (bot: torrents)
+2016-11-08 16:41:35 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'torrents.spiders', 'CONCURRENT_REQUESTS_PER_DOMAIN': 1, 'RANDOMIZE_DOWNLOAD_DELAY': False, 'SPIDER_MODULES': ['torrents.spiders'], 'BOT_NAME': 'torrents', 'USER_AGENT': 'https://www.thepiratebay.org', 'LOG_FILE': './torrents.log', 'DOWNLOAD_DELAY': 5}
+2016-11-08 16:41:36 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats']
+2016-11-08 16:41:37 [scrapy] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2016-11-08 16:41:37 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2016-11-08 16:41:37 [scrapy] INFO: Enabled item pipelines:
+['torrents.pipelines.TorrentsPipeline']
+2016-11-08 16:41:37 [scrapy] INFO: Spider opened
+2016-11-08 16:41:37 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2016-11-08 16:41:37 [scrapy] DEBUG: Telnet console listening on 127.0.0.1:6023
+2016-11-08 16:41:39 [scrapy] DEBUG: Crawled (200) <GET https://thepiratebay.org/search/spartacus/0/99/205/> (referer: None)
+2016-11-08 16:41:39 [py.warnings] WARNING: C:\Users\mianj\Git\kickass-crawler\torrents\torrents\spiders\torrents_spider.py:51: ScrapyDeprecationWarning: Call to deprecated function select. Use .xpath() instead.
+  item['title'] = entry.select('td[2]/div[1]/a[1]/text()').extract()
+
+2016-11-08 16:41:39 [py.warnings] WARNING: C:\Users\mianj\Git\kickass-crawler\torrents\torrents\spiders\torrents_spider.py:53: ScrapyDeprecationWarning: Call to deprecated function select. Use .xpath() instead.
+  item['url'] = entry.select('td[2]/div[1]/a[1]/@href').extract()
+
+2016-11-08 16:41:39 [py.warnings] WARNING: C:\Users\mianj\Git\kickass-crawler\torrents\torrents\spiders\torrents_spider.py:55: ScrapyDeprecationWarning: Call to deprecated function select. Use .xpath() instead.
+  item['torrent'] = entry.select('td[2]/a[starts-with(@title,"Download this torrent")]/@href').extract()
+
+2016-11-08 16:41:39 [py.warnings] WARNING: C:\Users\mianj\Git\kickass-crawler\torrents\torrents\spiders\torrents_spider.py:57: ScrapyDeprecationWarning: Call to deprecated function select. Use .xpath() instead.
+  item['seed'] = entry.select('td[3]/text()').extract()
+
+2016-11-08 16:41:39 [py.warnings] WARNING: C:\Users\mianj\Git\kickass-crawler\torrents\torrents\spiders\torrents_spider.py:59: ScrapyDeprecationWarning: Call to deprecated function select. Use .xpath() instead.
+  item['leech'] = entry.select('td[4]/text()').extract()
+
+2016-11-08 16:41:42 [scrapy] INFO: Closing spider (finished)
+2016-11-08 16:41:42 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 235,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 13345,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2016, 11, 8, 16, 41, 42, 447000),
+ 'log_count/DEBUG': 2,
+ 'log_count/INFO': 7,
+ 'log_count/WARNING': 5,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2016, 11, 8, 16, 41, 37, 977000)}
+2016-11-08 16:41:42 [scrapy] INFO: Spider closed (finished)
