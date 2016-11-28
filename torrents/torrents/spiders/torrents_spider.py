@@ -44,24 +44,41 @@ class TorrentsSpider(Spider):
         entries = selector.xpath('//tr[not(@class="header")]')
         items = []
         n = 0
-        print "\n			<<<<<< TORRENTS >>>>>>\n"
         for entry in entries:
-			n = n+1
-			item = TorrentsItem()
-			item['title'] = entry.select('td[2]/div[1]/a[1]/text()').extract()
-			item['title'] = ''.join(item['title'])
-			item['url'] = entry.select('td[2]/div[1]/a[1]/@href').extract()
-			item['url'] = ''.join(item['url'])
-			item['torrent'] = entry.select('td[2]/a[starts-with(@title,"Download this torrent")]/@href').extract()
-			item['torrent'] = ''.join(item['torrent'])
-			item['seed'] = entry.select('td[3]/text()').extract()
-			item['seed'] = ''.join(item['seed'])
-			item['leech'] = entry.select('td[4]/text()').extract()
-			item['leech'] = ''.join(item['leech'])
-			items.append(item)
-			print str(n) +' Title -> '+item['title'] + bcolors.OKGREEN + "		-> Seed: " + str(item['seed']) + bcolors.FAIL + "		-> Leech: " + str(item['leech']) + bcolors.ENDC
-        next = int(raw_input('Which Torrent to Download? 1/'+str(n)+'\n -> '))
-        if(next <= 0) or (next >n):
-            return None
-        return items[next-1]
+            item = TorrentsItem()
+            item['title'] = entry.select('td[2]/div[1]/a[1]/text()').extract()
+            item['title'] = ''.join(item['title'])
+            item['url'] = entry.select('td[2]/div[1]/a[1]/@href').extract()
+            item['url'] = ''.join(item['url'])
+            item['torrent'] = entry.select('td[2]/a[starts-with(@title,"Download this torrent")]/@href').extract()
+            item['torrent'] = ''.join(item['torrent'])
+            item['seed'] = entry.select('td[3]/text()').extract()
+            item['seed'] = ''.join(item['seed'])
+            item['leech'] = entry.select('td[4]/text()').extract()
+            item['leech'] = ''.join(item['leech'])
+            return item
+        file = open('not_found.pbay','a')
+        file.write(str(self.keywords)+" <-> "+str(self.start_urls)+"\n")
+        file.close()
+        return None
+        # print "\n			<<<<<< TORRENTS >>>>>>\n"
+        # for entry in entries:
+		# 	n = n+1
+		# 	item = TorrentsItem()
+		# 	item['title'] = entry.select('td[2]/div[1]/a[1]/text()').extract()
+		# 	item['title'] = ''.join(item['title'])
+		# 	item['url'] = entry.select('td[2]/div[1]/a[1]/@href').extract()
+		# 	item['url'] = ''.join(item['url'])
+		# 	item['torrent'] = entry.select('td[2]/a[starts-with(@title,"Download this torrent")]/@href').extract()
+		# 	item['torrent'] = ''.join(item['torrent'])
+		# 	item['seed'] = entry.select('td[3]/text()').extract()
+		# 	item['seed'] = ''.join(item['seed'])
+		# 	item['leech'] = entry.select('td[4]/text()').extract()
+		# 	item['leech'] = ''.join(item['leech'])
+		# 	items.append(item)
+		# 	print str(n) +' Title -> '+item['title'] + bcolors.OKGREEN + "		-> Seed: " + str(item['seed']) + bcolors.FAIL + "		-> Leech: " + str(item['leech']) + bcolors.ENDC
+        # next = int(raw_input('Which Torrent to Download? 1/'+str(n)+'\n -> '))
+        # if(next <= 0) or (next >n):
+        #     return None
+        # return items[next-1]
     

@@ -16,25 +16,30 @@ class TorrentsPipeline(object):
             os.makedirs('torrents')
 
     def process_item(self, item, spider):
-        if not self.exists(item['title']):
-            self.download_item(item)
-            time.sleep(5) # pause to prevent 502 eror and hammering
+        if item!=None:
+            if not self.exists(item['title']):
+                self.download_item(item)
+                time.sleep(5) # pause to prevent 502 eror and hammering
         return item
 
     def download_item(self, item):
-        title = item['title']
-        print 'Downloading ' + title
-        f = open('torrents/torrents.log', 'a')
-        f.write(title + "\n")
-        f.close()
-        #print item['torrent']
-        path = item['torrent']
-        print 'Torrent path: '+path
-        #path = path[2:]
-        #print 'Path 2: '+path
-        process = subprocess.Popen("bash\nsh curl_torrent.sh "+path,stdout=subprocess.PIPE,shell=True)
-        output = process.communicate()[0]
-        print output
+        if item!=None:
+            title = item['title']
+            f = open('torrents/torrents.log', 'a')
+            f.write(title + "\n")
+            f.close()
+            #print item['torrent']
+            path = item['torrent']
+            #path = path[2:]
+            #print 'Path 2: '+path
+            print 'Adding ' + title
+            file = open('to_download.pbay', 'a')
+            file.write(path+'\n')
+            #process = subprocess.Popen("bash\nsh curl_torrent.sh "+path,stdout=subprocess.PIPE,shell=True)
+            #output = process.communicate()[0]
+            #print output
+        else:
+            print "No torrent found"
 
     def exists(self, title):
         for line in open('torrents/torrents.log','a+'):
